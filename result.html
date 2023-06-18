@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Captions</title>
+</head>
+<body>
+    <h1>Generated Captions</h1>
+    <br><button onclick="history.back()">Upload Another Image</button>
+    <h2>Input photo:</h2>
+    <img src="{{ url_for('static', filename=filename) }}" alt="Uploaded Image" width="300">
+    <h2>Generated Captions:</h2>
+    <ul>
+        {% for caption in captions %}
+        <li>{{ caption }}</li>
+        {% endfor %}
+    </ul>
+	
+</body>
+</html>
